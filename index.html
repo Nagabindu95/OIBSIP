@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Booking System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5">Appointment Booking System</h1>
+
+    <h2>Add Doctor</h2>
+    <form action="/add_teacher" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <input type="text" class="form-control" id="department" name="department" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Isuue</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Doctor</button>
+    </form>
+
+    <h2>Add Patient</h2>
+    <form action="/add_student" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Patient</button>
+    </form>
+
+    <h2>Schedule Appointment</h2>
+    <form action="/schedule_appointment" method="post">
+        <div class="form-group">
+            <label for="teacher_id">Doctor ID</label>
+            <input type="number" class="form-control" id="teacher_id" name="teacher_id" required>
+        </div>
+        <div class="form-group">
+            <label for="student_id">Patient ID</label>
+            <input type="number" class="form-control" id="student_id" name="student_id" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" class="form-control" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+            <label for="purpose">Purpose</label>
+            <input type="text" class="form-control" id="purpose" name="purpose" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+    </form>
+
+    <h2>View Appointments</h2>
+    <a href="/appointments" class="btn btn-info">View All Appointments</a>
+</div>
+</body>
+</html>

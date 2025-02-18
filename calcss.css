@@ -1,0 +1,95 @@
+body {
+    font-family:Arial,sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#212121;
+    margin: 0;
+}
+
+.calculator {
+    background:#A35C7A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width:400px;
+}
+
+.display {
+    display:flex;
+    width: 93%;
+    height: 50px;
+    padding: 10px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    background:white; 
+    justify-content:space-between ;
+    border-radius:4px;
+    box-shadow: inset 5px 5px 10px rgba(78, 78, 78, 0.3), 
+                inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.2s ease;
+
+}
+
+#expression{
+    flex:1;
+    text-align:left;
+    color:black;
+}
+#result{
+    flex:1;
+    text-align:right;
+    font-weight:bold;
+    color:black;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 80px;
+    height: 60px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 2px solid #C890A7;
+    border-radius:80px;
+    background: #C890A7;
+    font-weight: bold;
+    text-align: center;
+    color: #212121;
+    box-shadow: inset 4px 4px 8px rgb(78, 78, 78,0.3), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+    transition: all 0.25s linear;
+}
+button:hover {
+   
+    transform:scale(1.05);
+    
+}
+
+button:active {
+  transform: translateY(4px);
+  background: #D9A8B8;
+box-shadow: inset 8px 8px 16px rgba(78, 78, 78, 0.5), 
+                inset -8px -8px 16px rgba(255, 255, 255, 0.6); 
+}
+button.operator {
+     background: rgba(200, 144, 167, 1);
+    border: 2px solid rgba(200, 144, 167, 0.8);
+    box-shadow: inset 3px 3px 6px rgba(78, 78, 78, 0.5), 
+                inset -3px -3px 6px rgba(255, 255, 255, 0.6);
+}
+button.operator:hover {
+    background: rgba(200, 144, 167, 1); /* Darker on hover */
+}
+
+
+.zero {
+    grid-column: span ;
+}

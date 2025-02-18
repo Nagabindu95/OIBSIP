@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #441752, #8174A0, #A888B5, #EFB6C8);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(68, 23, 82, 0.3),
+                -10px -10px 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #EFE9D5;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background: #A888B5;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+    color: #441752;
+}
+
+button {
+    background: #EFB6C8;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.task-list {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #EFE9D5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #8174A0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.task-buttons button {
+    margin-left: 5px;
+    padding: 5px;
+    font-size: 0.8rem;
+}

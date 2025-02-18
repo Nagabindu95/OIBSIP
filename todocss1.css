@@ -1,0 +1,154 @@
+/* Gradient background with 3D depth */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #353535, #3c6e71, #284b63, #d9d9d9);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Background animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main container */
+.container {
+    width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(53, 53, 53, 0.3), 
+                -10px -10px 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Input container */
+.input-container {
+    display: flex;
+    align-items: center;
+    background: #3c6e71;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 8px rgba(53, 53, 53, 0.3), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Task input */
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+    color: #284b63;
+}
+
+/* Add button */
+button {
+    background: #d9d9d9;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: inset 4px 4px 8px rgba(53, 53, 53, 0.3), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(53, 53, 53, 0.5), 
+                -4px -4px 10px rgba(255, 255, 255, 0.5);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Task lists */
+.task-list {
+    margin-top: 20px;
+    display: none;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+/* Task items */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #3c6e71;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(53, 53, 53, 0.3), 
+                -5px -5px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Complete & Delete buttons */
+.task-buttons button {
+    background: #d9d9d9;
+    border: none;
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+.task-buttons button:hover {
+    background: #ffffff;
+    color: #284b63;
+}
+
+/* Task Toggle Buttons */
+.task-toggle-buttons {
+    margin: 10px 0;
+}
+
+.task-toggle-buttons button {
+    background: #284b63;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 5px;
+    color: white;
+    box-shadow: inset 4px 4px 8px rgba(53, 53, 53, 0.3), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease-in-out;
+}
+
+.task-toggle-buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(53, 53, 53, 0.5), 
+                -4px -4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.task-toggle-buttons button:active {
+    transform: translateY(2px);
+}
