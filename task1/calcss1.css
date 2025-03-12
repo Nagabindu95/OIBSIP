@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #C890A7, #E6C3D2, #D9A8B8, #F0E6F0);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.calculator {
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Slight glass effect */
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.1);
+}
+#expression{
+    flex:1;
+    text-align:left;
+    color:black;
+}
+#result{
+    flex:1;
+    text-align:right;
+    font-weight:bold;
+    color:black;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.display {
+    display: flex;
+    width: 93%;
+    height: 50px;
+    padding: 10px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    box-shadow: inset 4px 4px 8px rgba(78, 78, 78, 0.3), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+button {
+    width: 80px;
+    height: 60px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 2px solid #C890A7;
+    border-radius: 80px;
+    background: #C890A7;
+    color: #212121;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 4px 4px 8px rgba(78, 78, 78, 0.3), 
+                inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: translateY(2px);
+    background: #D9A8B8;
+    box-shadow: inset 3px 3px 6px rgba(78, 78, 78, 0.5), 
+                inset -3px -3px 6px rgba(255, 255, 255, 0.6);
+}button.operator:hover {
+    background: rgba(200, 144, 167, 1); /* Darker on hover */
+}
+
+
+.zero {
+    grid-column: span ;
+}

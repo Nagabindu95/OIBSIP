@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="todocss1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button onclick="addTask()">➕</button>
+        </div>
+        <div class="task-toggle-buttons">
+            <button onclick="showTasks('pending')">Pending Tasks</button>
+            <button onclick="showTasks('completed')">Completed Tasks</button>
+        </div>
+        <div class="task-list" id="pendingTasksContainer">
+            <h2>Pending Tasks</h2>
+            <ul id="pendingTasks"></ul>
+        </div>
+        <div class="task-list" id="completedTasksContainer" style="display: none;">
+            <h2>Completed Tasks</h2>
+            <ul id="completedTasks"></ul>
+        </div>
+    </div>
+    <script src="todojs.js"></script>
+</body>
+</html>
+
+
