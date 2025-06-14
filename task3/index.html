@@ -1,135 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tribute to Ratan Tata</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      color:white;
-      overflow-x: hidden;
-    }
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      position: relative;
-    }
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      transform: translateZ(20px);
-    }
-    .hero h2 {
-      font-size: 1.8rem;
-      color: #bbb;
-      transform: translateZ(15px);
-    }
-    .play-button {
-      display: inline-block;
-      margin: 20px 0;
-      width: 60px;
-      height: 60px;
-      border: 2px solid #fff;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 56px;
-      font-size: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      transform: translateZ(10px);
-    }
-    .play-button:hover {
-      background: #fff;
-      color: #0d1117;
-      box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3);
-    }
-    .quote-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #ffffff;
-      color: #111;
-      padding: 40px 20px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-    .quote-section img {
-      width: 500px;
-      border-radius: 20%;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      transform: rotateY(-20deg);
-      transition: transform 0.5s ease;
-    }
-    .quote-section img:hover {
-      transform: rotateY(0deg) scale(1.1);
-    }
-    .quote-section p {
-      font-size: 1.8rem;
-      font-style: italic;
-      flex: 1;
-      margin-left: 20px;
-      text-align: left;
-    }
-    .bio-section {
-      padding: 40px 20px;
-      perspective: 1000px;
-    }
-    .bio-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    }
-    .bio-section p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      transform: translateZ(10px);
-      transition: transform 0.5s ease;
-    }
-    .bio-section p:hover {
-      transform: translateZ(20px);
-    }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #bbb;
-    }
-    .footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Ratan Tata</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Full-screen background */
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 1s ease-in-out; /* Smooth transition */
+        }
+
+        /* Dark overlay to improve text readability */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Moving text container */
+        .text-container {
+            position: absolute;
+            bottom: -100%;
+            width: 80%;
+            animation: moveUp 30s linear infinite;
+        }
+
+        @keyframes moveUp {
+            0% { bottom: -100%; opacity: 0; }
+            20% { opacity: 1; }
+            100% { bottom: 100%; opacity: 0; }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-top: 20px;
+            line-height: 1.8;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        /* Biography section */
+        .bio {
+            position: absolute;
+            bottom: -300%;
+            width: 80%;
+            animation: moveUp 60s linear infinite;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1.1rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Ratan Tata</h1>
-    <h2>1937 - 2024</h2>
-    <div class="play-button">▶</div>
-  </div>
-  <div class="quote-section">
-    <p>"𝑻𝒂𝒌𝒆 𝒕𝒉𝒆 𝒔𝒕𝒐𝒏𝒆𝒔 𝒑𝒆𝒐𝒑𝒍𝒆 𝒕𝒉𝒓𝒐𝒘 𝒂𝒕 𝒚𝒐𝒖, 𝒂𝒏𝒅 𝒖𝒔𝒆 𝒕𝒉𝒆𝒎 𝒕𝒐 𝒃𝒖𝒊𝒍𝒅 𝒂 𝒎𝒐𝒏𝒖𝒎𝒆𝒏𝒕."</p>
-    <img src="C:\Users\Nagabindu pasupuleti\OneDrive\Desktop\appointment_booking\templates\5628543.webp" alt="Ratan Tata">
-  </div>
-  <div class="bio-section">
-    <h2>Biography</h2>
-    <p>
-      Ratan Tata is a renowned industrialist and philanthropist, known for his visionary leadership and contributions to the growth of India’s economy. 
-      As the Chairman Emeritus of Tata Sons, he played a key role in transforming the Tata Group into a global business empire, 
-      with notable acquisitions like Jaguar Land Rover and Corus Steel.
-    </p>
-    <p>
-      Beyond business, Ratan Tata is deeply committed to social causes. His contributions to education, rural development, and healthcare have 
-      improved the lives of millions. He continues to inspire generations with his humility, compassion, and innovative spirit.
-    </p>
-  </div>
-  <div class="footer">
-    Made with ❤️ by Naga Bindu
-  </div>
+
+    <div class="text-container">
+        <h1>Ratan Tata</h1>
+        <p class="highlight">"Take the stones people throw at you and use them to build a monument."</p>
+        <p>Visionary | Industrialist | Philanthropist</p>
+    </div>
+
+    <div class="bio">
+        <p><span class="highlight">Born:</span> December 28, 1937</p>
+        <p><span class="highlight">Chairman of Tata Group:</span> 1991 - 2012</p>
+
+        <p>Ratan Tata is one of India's most respected industrialists and philanthropists. He led the Tata Group to global heights, overseeing major acquisitions like <span class="highlight">Jaguar Land Rover</span>, <span class="highlight">Tetley Tea</span>, and <span class="highlight">Corus Steel</span>.</p>
+
+        <p>Under his leadership, the Tata Group expanded into diverse industries, including automobiles, technology, and telecommunications.</p>
+
+        <p>He introduced the revolutionary <span class="highlight">Tata Nano</span>, the world's cheapest car, aiming to make car ownership accessible to millions of Indians.</p>
+
+        <p>Beyond business, Ratan Tata has been a <span class="highlight">passionate philanthropist</span>. Through the Tata Trusts, he has donated billions to education, healthcare, and social causes, uplifting underprivileged communities.</p>
+
+        <p>During India's worst crises, including the <span class="highlight">26/11 Mumbai attacks</span> and the <span class="highlight">COVID-19 pandemic</span>, he extended immense support to victims and the healthcare system.</p>
+
+        <p>His leadership is defined by <span class="highlight">integrity, humility, and innovation</span>. He remains an inspiration for entrepreneurs and young leaders worldwide.</p>
+
+        <p>Ratan Tata is not just a business leader; he is a national treasure whose legacy will continue to impact generations to come.</p>
+    </div>
+
+    <script>
+        // List of images for background rotation
+        const images = [
+            'C:/Users/Nagabindu pasupuleti/OneDrive/Desktop/oasis/tataimg.jpg',  // Change this to your actual image paths
+            'C:/Users/Nagabindu pasupuleti/OneDrive/Desktop/oasis/tata4.jpg',
+            'C:/Users/Nagabindu pasupuleti/OneDrive/Desktop/oasis/tata3.jpg',
+            'C:/Users/Nagabindu pasupuleti/OneDrive/Desktop/oasis/tata3.jpg',
+            'C:/Users/Nagabindu pasupuleti/OneDrive/Desktop/oasis/tata1.png'
+        ];
+
+        let index = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundImage = `url('${images[index]}')`;
+            index = (index + 1) % images.length; // Loop through images
+        }
+
+        // Change background every 2 minutes (120000ms)
+        setInterval(changeBackground, 12000);
+
+        // Initial background set
+        changeBackground();
+    </script>
+
 </body>
 </html>
-
